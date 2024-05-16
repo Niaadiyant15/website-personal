@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f8e8ba;
+}
+
+header {
+    display: flex; /* Menggunakan Flexbox */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    text-align: center;
+}
+
+header .jumbotron {
+    font-size: 15px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    background-color: #ccb480;
+}
+
+header nav {
+    padding: 5px;
+    background-color: #8a6c45;
+}
+
+header nav li {
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+header nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+    display: flex; /* Menggunakan Flexbox */
+}
+
+main #content {
+    flex: 3; /* Bagian konten akan mendapatkan 75% lebar */
+}
+
+main aside {
+    flex: 1; /* Bagian samping akan mendapatkan 25% lebar */
+    padding-left: 20px;
+}
+
+main aside section img {
+    padding: 5px;
+}
+
+main aside section img:hover {
+    opacity: 0.7;
+}
+
+footer {
+    padding: 10px;
+    color: white;
+    background-color: #8a6c45;
+    text-align: center;
+}
+
+h2 {
+    color: #8a6c45;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.card {
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #fdf6de;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile header {
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column; /* Tampilkan konten secara vertikal pada layar kecil */
+    }
+
+    main #content,
+    main aside {
+        width: 100%;
+        padding: 0;
+    }
+}
